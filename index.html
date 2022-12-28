@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="/pages/login_style.css">
+        <title>Login</title>
+
+    </head>
+    <body>
+        <section class="area-login">
+            <div class="login">
+                <div>
+                    <img src="/src/assets/mycamaleon_logo.png">
+                </div>
+                <form method="POST">
+                    <input type="email" name="email" placeholder="email" onchange="onChangeEmail()" autofocus>
+                    <input type="password" name="password" placeholder="password" onchange="onChangePassword()">
+                    <button type="button" class="solid" id="login-button" onclick="login()">Entrar</button>
+                    <left><p>Ainda nao tem conta?<a href="#">Criar</a></p></left>
+                </form>
+            </div>
+        </section>
+    </body>
 </html>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script src="firebase.js"></script>
