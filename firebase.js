@@ -14,8 +14,15 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
+createUserWithEmailAndPassword(form.email().value, form.password().value)
+  .then(() => {
+    hideLoading();
+    window.location.href = "pages/home/home.html";
+}).catch(error => {
+    hideLoading();
+    alert(getErrorMessage(error));
+});
+}
     // Signed in 
     const user = userCredential.user;
     // ...
