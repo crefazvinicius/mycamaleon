@@ -12,6 +12,10 @@ body{
 }
 
 .login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
     background-color: #181920;
     width: 355px;
     height: 320px;
@@ -20,14 +24,51 @@ body{
 
 .login form{
     display: flex;
+    width: 100%;
     flex-direction: column;
 }
 
 .login input{
     margin-top: 10px;
     background-color: #252a34;
+    padding-left: 10px;
     color: #cbd0f7;
     border: none;
-    
+    height: 45px;
+    outline: none;
+    border-radius: 8px;
+}
 
+.login img{
+    width: 120px;
+    height: auto;
+}
+
+input::placeholder{
+    color: #cbd0f7;
+    font-size: 14px;
+}
+
+form [type="submit"]{
+    display: block;
+    background-color: #5568fe;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+p{
+    color: #cbd0f7;
+    margin-left: 5px;
+}
+
+a{
+    color: #5568fe;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+left{
+    align-items: flex-start;
 }
